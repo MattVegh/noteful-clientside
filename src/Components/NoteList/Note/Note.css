@@ -1,0 +1,14 @@
+.Note {
+    border: 1px solid black;
+    margin: 20px;
+    list-style-type: none;
+   
+}
+
+.IndvNote {
+    text-decoration: none;
+}
+
+.NoteContent {
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,9 @@
+.FolderList ul {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.FolderList ul a {
+    text-decoration: none;
+}

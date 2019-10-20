@@ -20,17 +20,17 @@ export default class AddNote extends Component {
         event.preventDefault();
         const name = (event.target['noteName'].value)
         const content = (event.target['noteContent'].value)
-        const folderId = this.state.selectedFolderId
-        fetch(`http://localhost:9090/notes`, {
+        const folder_id = this.state.selectedFolderId
+        fetch(`http://localhost:8000/api/notes`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                name: name,
-                modified: new Date().toISOString(),
-                folderId: folderId,
+                note_name: name,
+                date_modified: new Date().toISOString(),
+                folder_id: folder_id,
                 content: content
               }) 
         })

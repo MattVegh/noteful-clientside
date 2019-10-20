@@ -23,8 +23,8 @@ class App extends Component {
 
   componentDidMount() {
     Promise.all([
-      fetch(`http://localhost:9090/notes`),
-      fetch(`http://localhost:9090/folders`)
+      fetch(`http://localhost:8000/api/notes`),
+      fetch(`http://localhost:8000/api/folders`)
   ])
       .then(([notesRes, foldersRes]) => {
           if (!notesRes.ok)
@@ -75,13 +75,13 @@ class App extends Component {
           <div className='ListsContainer'>
             <nav className='AppNav'>
               <Route exact path='/' component={FolderList}/>
-              <Route exact path='/folder/:folderId' component={FolderList}/>
-              <Route exact path='/folder/:folderId/:noteId' component={SideNote} />
+              <Route exact path='/folder/:folder_id' component={FolderList}/>
+              <Route exact path='/folder/:folder_id/:noteId' component={SideNote} />
             </nav>
             <main className='AppMain'>
               <Route exact path='/' component={NoteList} />
-              <Route exact path='/folder/:folderId' component={NoteList} />
-              <Route path='/folder/:folderId/:noteId' component={Note} />
+              <Route exact path='/folder/:folder_id' component={NoteList} />
+              <Route path='/folder/:folder_id/:noteId' component={Note} />
               <Route path='/AddFolder' component={(props) => {return <AddFolder {...props} addNewFolder={this.addNewFolder} />}} />
               <AddNoteError>
                 <Route path='/AddNote' component={(props) => {return <AddNote {...props} addNewNote={this.addNewNote} />} }/>

@@ -9,14 +9,14 @@ export default class AddFolder extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const name = (event.target['folderName'].value)
-        fetch(`http://localhost:9090/folders`, {
+        fetch(`http://localhost:8000/api/folders`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                name: name
+                folder_name: name
               })
         })
         .then(response => response.json())

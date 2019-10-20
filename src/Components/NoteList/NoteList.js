@@ -10,7 +10,7 @@ export default class NoteList extends Component {
     
     handleDeleteNote = (event, noteId) => {
         event.preventDefault();
-        fetch(`http://localhost:9090/notes${noteId}`, {
+        fetch(`http://localhost:8000/api/notes${noteId}`, {
           method: 'DELETE',
           headers: {
             'content-type': 'application/json'
@@ -29,8 +29,8 @@ export default class NoteList extends Component {
         }
        
         
-                const notes = this.context.notes.filter(note => note.folderId === this.props.match.params.folderId);
-                const folderArray = this.context.folders.filter(folder => folder.id === this.props.match.params.folderId);
+                const notes = this.context.notes.filter(note => note.folder_id === this.props.match.params.folder_id);
+                const folderArray = this.context.folders.filter(folder => folder.id === this.props.match.params.folder_id);
                 const folder = folderArray[0]
                 
     return (

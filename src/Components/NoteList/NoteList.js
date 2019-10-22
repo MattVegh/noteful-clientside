@@ -37,7 +37,7 @@ export default class NoteList extends Component {
            <div>
                 <section className='NoteList'>
                     <ul>
-                        {folder ? notes.map(notes =>
+                        {folder ? notes.filter(notes =>
                             <li key={notes.id}>
                                 <Link 
                                     to={`/api/folder/${notes.folder_id}/${notes.id}`}  
@@ -51,7 +51,7 @@ export default class NoteList extends Component {
                                 </button>
                             </li>) 
                             :
-                           this.context.notes.filter(notes =>
+                           this.context.notes.map(notes =>
                             <li key={notes.id}>
                                 <Link 
                                     to={`/api/folder/${notes.folder_id}/${notes.id}`}  

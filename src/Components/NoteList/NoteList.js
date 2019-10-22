@@ -37,7 +37,7 @@ export default class NoteList extends Component {
            <div>
                 <section className='NoteList'>
                     <ul>
-                        {folder ? notes.filter(notes =>
+                        {folder ? notes.map(notes =>
                             <li key={notes.id}>
                                 <Link 
                                     to={`/api/folder/${notes.folder_id}/${notes.id}`}  

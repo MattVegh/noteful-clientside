@@ -53,7 +53,6 @@ class App extends Component {
 
   addNewFolder = (newFolder) => {
     this.setState({folders: [...this.state.folders, newFolder]})
-    console.log(this.state.folders)
 
 }
   addNewNote = (newNote) => {
@@ -68,7 +67,7 @@ class App extends Component {
       notes: this.state.notes,
       deleteNote: this.deleteNote
     }
-    console.log(contextValue)
+    console.log('context', contextValue)
       return (
         <NoteContext.Provider value={contextValue} >
         <div className="App">

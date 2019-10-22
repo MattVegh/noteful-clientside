@@ -40,7 +40,7 @@ export default class NoteList extends Component {
                         {folder ? notes.map(notes =>
                             <li key={notes.id}>
                                 <Link 
-                                    to={`/folder/${folder.id}/${notes.id}`}  
+                                    to={`/api/folder/${folder.id}/${notes.id}`}  
                                     className='NoteHeader'>{notes.name}
                                 </Link>
                                 <p className='NoteDate'>{notes.modified}</p>
@@ -54,7 +54,7 @@ export default class NoteList extends Component {
                            this.context.notes.map(notes =>
                             <li key={notes.id}>
                                 <Link 
-                                    to={`/folder/${notes.folderId}/${notes.id}`}  
+                                    to={`/api/folder/${notes.folder_id}/${notes.id}`}  
                                     className='NoteHeader'>{notes.name}
                                 </Link>
                                 <p className='NoteDate'>{notes.modified}</p>

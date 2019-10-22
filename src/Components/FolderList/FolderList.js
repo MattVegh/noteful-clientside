@@ -12,7 +12,7 @@ export default function FolderList() {
             return (
                 <div className='FolderList'>
                     <ul>
-                        {value.folders.map(folder => <Link to={`/folder/${folder.id}`}key={folder.id}>{folder.name}</Link>)}
+                        {value.folders.map(folder => <Link to={`/api/folder/${folder.id}`}key={folder.id}>{folder.name}</Link>)}
                     </ul>
                     <Link to='/AddFolder'>Add Folder</Link>
                 </div>

@@ -21,7 +21,7 @@ export default class AddNote extends Component {
         const name = (event.target['noteName'].value)
         const content = (event.target['noteContent'].value)
         const folder_id = this.state.selectedFolderId
-        fetch(`http://localhost:8000/api/notes`, {
+        fetch(`https://noteful-server-mv2.herokuapp.com/api/notes`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

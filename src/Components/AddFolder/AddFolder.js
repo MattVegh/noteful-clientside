@@ -9,7 +9,7 @@ export default class AddFolder extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         const name = (event.target['folderName'].value)
-        fetch(`http://localhost:8000/api/folders`, {
+        fetch(`https://noteful-server-mv2.herokuapp.com/api/folders`, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

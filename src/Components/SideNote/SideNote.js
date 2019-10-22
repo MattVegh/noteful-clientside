@@ -14,7 +14,7 @@ export default function SideNote(props) {
             <Link to='/'>Back</Link>
             <NoteContext.Consumer>
                 {(value) => {
-                    const folderHeader = value.folders.filter(folder => folder.id === props.match.params.folderId)
+                    const folderHeader = value.folders.filter(folder => folder.id === props.match.params.folder_id)
                     console.log('folderheader is', folderHeader)
                     console.log(value)
                     return (

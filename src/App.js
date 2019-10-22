@@ -75,13 +75,13 @@ class App extends Component {
           <div className='ListsContainer'>
             <nav className='AppNav'>
               <Route exact path='/' component={FolderList}/>
-              <Route exact path='/folder/:folder_id' component={FolderList}/>
-              <Route exact path='/folder/:folder_id/:noteId' component={SideNote} />
+              <Route exact path='/api/folder/:folder_id' component={FolderList}/>
+              <Route exact path='/api/folder/:folder_id/:noteId' component={SideNote} />
             </nav>
             <main className='AppMain'>
               <Route exact path='/' component={NoteList} />
-              <Route exact path='/folder/:folder_id' component={NoteList} />
-              <Route path='/folder/:folder_id/:noteId' component={Note} />
+              <Route exact path='/api/folder/:folder_id' component={NoteList} />
+              <Route path='/api/folder/:folder_id/:noteId' component={Note} />
               <Route path='/AddFolder' component={(props) => {return <AddFolder {...props} addNewFolder={this.addNewFolder} />}} />
               <AddNoteError>
                 <Route path='/AddNote' component={(props) => {return <AddNote {...props} addNewNote={this.addNewNote} />} }/>

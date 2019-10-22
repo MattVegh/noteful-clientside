@@ -51,7 +51,7 @@ export default class NoteList extends Component {
                                 </button>
                             </li>) 
                             :
-                           this.context.notes.map(notes =>
+                           this.context.notes.filter(notes =>
                             <li key={notes.id}>
                                 <Link 
                                     to={`/api/folder/${notes.folder_id}/${notes.id}`}  

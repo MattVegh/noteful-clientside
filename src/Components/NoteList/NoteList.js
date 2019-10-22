@@ -29,8 +29,8 @@ export default class NoteList extends Component {
         }
        
         
-                const notes = this.context.notes.filter(note => note.folder_id === this.props.match.params.folder_id);
-                const folderArray = this.context.folders.filter(folder => folder.id === this.props.match.params.folder_id);
+                const notes = this.context.notes.filter(note => note.folderId === this.props.match.params.folderId);
+                const folderArray = this.context.folders.filter(folder => folder.id === this.props.match.params.folderId);
                 const folder = folderArray[0]
                 
     return (
@@ -40,7 +40,7 @@ export default class NoteList extends Component {
                         {folder ? notes.map(notes =>
                             <li key={notes.id}>
                                 <Link 
-                                    to={`/api/folder/${notes.folder_id}/${notes.id}`}  
+                                    to={`/api/folder/${notes.folderId}/${notes.id}`}  
                                     className='NoteHeader'>{notes.name}
                                 </Link>
                                 <p className='NoteDate'>{notes.modified}</p>
@@ -54,7 +54,7 @@ export default class NoteList extends Component {
                            this.context.notes.map(notes =>
                             <li key={notes.id}>
                                 <Link 
-                                    to={`/api/folder/${notes.folder_id}/${notes.id}`}  
+                                    to={`/api/folder/${notes.folderId}/${notes.id}`}  
                                     className='NoteHeader'>{notes.name}
                                 </Link>
                                 <p className='NoteDate'>{notes.modified}</p>

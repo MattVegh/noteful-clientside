@@ -68,6 +68,7 @@ class App extends Component {
       notes: this.state.notes,
       deleteNote: this.deleteNote
     }
+    console.log(contextValue)
       return (
         <NoteContext.Provider value={contextValue} >
         <div className="App">

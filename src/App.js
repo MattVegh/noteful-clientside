@@ -76,7 +76,7 @@ class App extends Component {
             <nav className='AppNav'>
               <Route exact path='/' component={FolderList}/>
               <Route exact path='/api/folder/:folderId' component={FolderList}/>
-              <Route exact path='/api/folder/:folderId/:noteId' component={SideNote} />
+              {/* <Route exact path='/api/folder/:folderId/:noteId' component={SideNote} /> */}
             </nav>
             <main className='AppMain'>
               <Route exact path='/' component={NoteList} />

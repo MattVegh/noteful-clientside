@@ -9,7 +9,7 @@ export default function Folder(props) {
         folders: PropTypes.string
     }
     
-    const folder = props.folders.find(folder => folder.id === props.match.params.folder_id)
+    const folder = props.folders.find(folder => folder.id === props.match.params.folderId)
     
     return (
         <div className='Folder'>

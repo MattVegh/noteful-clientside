@@ -8,7 +8,7 @@ export default function SideNote(props) {
     SideNote.propTypes = {
         folders: PropTypes.string
     }
-if (folders) {
+if (!folders) {
     return (
         <div className='SideNote'>
             <Link to='/'>Back</Link>

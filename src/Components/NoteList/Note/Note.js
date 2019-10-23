@@ -31,6 +31,8 @@ export default class Note extends Component {
         const noteArray = this.context.notes.filter(note => note.id === this.props.match.params.noteId);
         const note = noteArray[0]
         const folder = this.context.folders.filter(folder => folder.id === this.props.match.params.folderId)
+        console.log('note', note)
+        console.log('noteArray', noteArray)
     return (
         <div className='Note'>
             <li className='IndvNote' key={note.id}>

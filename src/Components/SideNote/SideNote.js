@@ -8,7 +8,9 @@ export default function SideNote(props) {
     SideNote.propTypes = {
         folders: PropTypes.string
     }
-    console.log(props)
+    console.log('props', props)
+    console.log('folders', folders)
+    console.log('NoteContext', NoteContext)
     return (
         
         <div className='SideNote'>

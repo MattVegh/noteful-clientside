@@ -10,7 +10,7 @@ export default function SideNote(props) {
     }
     console.log('props', props)
     console.log('side note context', props.contextValue)
-if (props.contextValue) {
+//if (props.contextValue) {
     return (
         
         <div className='SideNote'>
@@ -28,4 +28,4 @@ if (props.contextValue) {
         </div>
     )}
     
-}
+//}

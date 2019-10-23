@@ -68,6 +68,7 @@ class App extends Component {
       deleteNote: this.deleteNote
     }
     console.log('context', contextValue)
+  if(contextValue) {
       return (
         <NoteContext.Provider value={contextValue} >
         <div className="App">
@@ -91,7 +92,7 @@ class App extends Component {
           </div>
         </div>
         </NoteContext.Provider>
-
+  
 
     //     <div className="App">
     //     <Link to='/' className='AppHeader'>Noteful</Link>
@@ -116,7 +117,7 @@ class App extends Component {
 
 
       );
-    
+      }
   }
   
 }

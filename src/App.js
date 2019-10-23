@@ -68,9 +68,6 @@ class App extends Component {
       deleteNote: this.deleteNote
     }
     console.log('context', contextValue)
-  if(contextValue.folders.length == 0) {
-    return null 
-  } else  {
       return (
         <NoteContext.Provider value={contextValue} >
         <div className="App">
@@ -79,7 +76,7 @@ class App extends Component {
             <nav className='AppNav'>
               <Route exact path='/' component={FolderList}/>
               <Route exact path='/api/folder/:folderId' component={FolderList}/>
-              <Route exact path='/api/folder/:folderId/:noteId' component={(props) => {return <SideNote {...props} contextValue={this.contextValue} />}} />
+              <Route exact path='/api/folder/:folderId/:noteId' component={SideNote} />
             </nav>
             <main className='AppMain'>
               <Route exact path='/' component={NoteList} />
@@ -121,7 +118,6 @@ class App extends Component {
       );
       }
   }
-}
 
 
 export default App;

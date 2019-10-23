@@ -10,9 +10,9 @@ export default function SideNote(props) {
     }
     console.log('props', props)
     console.log('side note context', props.contextValue)
-// if (props.contextValue.folders == []) {
-//     return null
-// } else {
+if (props.contextValue.folders == []) {
+    return null
+} else {
     return (
         
         <div className='SideNote'>
@@ -30,4 +30,4 @@ export default function SideNote(props) {
         </div>
     )}
     
-//}
+}

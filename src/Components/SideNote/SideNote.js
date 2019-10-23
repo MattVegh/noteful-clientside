@@ -8,7 +8,7 @@ export default function SideNote(props) {
     SideNote.propTypes = {
         folders: PropTypes.string
     }
-
+if (folders) {
     return (
         <div className='SideNote'>
             <Link to='/'>Back</Link>
@@ -23,6 +23,7 @@ export default function SideNote(props) {
                 }}
             </NoteContext.Consumer>
         </div>
-    )
+    )}
+    
     
 }

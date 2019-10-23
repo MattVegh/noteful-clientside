@@ -21,8 +21,10 @@ export default function SideNote(props) {
             <Link to='/'>Back</Link>
             <NoteContext.Consumer>
                 
-                {context.folders.length == 0 ?
-                    (value) => {
+                {(value) => {
+                    if(value.folders.length == 0) {
+                        return null
+                    } else {
                     const folderHeader = value.folders.filter(folder => folder.id === props.match.params.folderId)
                     console.log('folderheader is', folderHeader)
                     console.log('value', value)
@@ -30,9 +32,8 @@ export default function SideNote(props) {
                         <div>{folderHeader[0].name}</div>
                     )
                 }
-            :
-            null
             }
+        }
                 
 
             </NoteContext.Consumer>

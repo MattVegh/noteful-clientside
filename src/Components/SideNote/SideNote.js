@@ -10,7 +10,7 @@ export default function SideNote(props) {
     }
     console.log('props', props)
     console.log('folders', SideNote.propTypes.folders)
-    console.log('NoteContext', NoteContext)
+if (SideNote.propTypes.folders) {
     return (
         
         <div className='SideNote'>
@@ -26,6 +26,6 @@ export default function SideNote(props) {
                 }}
             </NoteContext.Consumer>
         </div>
-    )
+    )}
     
 }

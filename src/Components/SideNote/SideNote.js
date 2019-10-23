@@ -10,7 +10,9 @@ export default function SideNote(props) {
     }
     console.log('props', props)
     console.log('side note context', props.contextValue)
-if (props.contextValue.folders.length == 0) {
+// if (props.contextValue.folders.length == 0) {
+//     return null
+if (props.contextValue.length == 0) {
     return null
 } else {
     return (

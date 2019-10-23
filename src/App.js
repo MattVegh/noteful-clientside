@@ -68,7 +68,7 @@ class App extends Component {
       deleteNote: this.deleteNote
     }
     console.log('context', contextValue)
-  if(contextValue.folders = []) {
+  if(contextValue.folders = ![]) {
       return (
         <NoteContext.Provider value={contextValue} >
         <div className="App">

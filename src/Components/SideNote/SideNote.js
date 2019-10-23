@@ -9,7 +9,7 @@ export default function SideNote(props) {
         folders: PropTypes.string
     }
     console.log('props', props)
-    console.log('folders', folders)
+    console.log('folders', SideNote.propTypes.folders)
     console.log('NoteContext', NoteContext)
     return (
         

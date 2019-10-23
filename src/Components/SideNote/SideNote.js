@@ -9,8 +9,8 @@ export default function SideNote(props) {
         folders: PropTypes.string
     }
     console.log('props', props)
-    console.log('side note context', contextValue)
-if (SideNote.propTypes.folders) {
+    console.log('side note context', props.contextValue)
+if (props.contextValue) {
     return (
         
         <div className='SideNote'>

@@ -29,8 +29,8 @@ export default class NoteList extends Component {
         }
        
         
-                const notes = this.context.notes.filter(note => note.folderId === this.props.match.params.folderId);
-                const folderArray = this.context.folders.filter(folder => folder.id === this.props.match.params.folderId);
+                const notes = this.context.notes.filter(note => note.folderId === parseInt(this.props.match.params.folderId));
+                const folderArray = this.context.folders.filter(folder => folder.id === parseInt(this.props.match.params.folderId));
                 const folder = folderArray[0]
                 
     return (

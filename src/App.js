@@ -69,6 +69,8 @@ class App extends Component {
     }
     console.log('context', contextValue)
   if(contextValue.folders = ![]) {
+    return null 
+  } else  {
       return (
         <NoteContext.Provider value={contextValue} >
         <div className="App">
@@ -119,7 +121,7 @@ class App extends Component {
       );
       }
   }
-  
 }
+
 
 export default App;

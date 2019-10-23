@@ -23,7 +23,7 @@ export default function SideNote(props) {
                 {(value) => {
                     const folderHeader = value.folders.filter(folder => folder.id === props.match.params.folderId)
                     console.log('folderheader is', folderHeader)
-                    console.log(value)
+                    console.log('value', value)
                     return (
                         <div>{folderHeader[0].name}</div>
                     )
